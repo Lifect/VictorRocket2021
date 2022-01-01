@@ -1,0 +1,99 @@
+﻿@page
+@model IndexModel
+@using ShopUI.Models
+@{
+    ViewData["Title"] = "Home page";
+}
+@if (Model._products == null)
+{
+    Model.OnGet();
+}
+<div class="text-center">
+    <h1 class="display-4">Victors Rocket!</h1>
+</div>
+
+
+<div class="d-flex justify-content-between">
+    <!--Sort-->
+    <div class="float-left">
+        <!--Form to sort all products-->
+        <form asp-page-handler="Sort">
+            <label>Sort: </label>
+            <select asp-for="_sortTerm" onchange="this.form.submit()">
+                <option value="">None</option>
+                <option value="_hPrice">Highest Price</option>
+                <option value="_lPrice">Lowest Price</option>
+                <option value="_AZProducts">Alphabetical A-Z</option>
+                <option value="_ZAProducts">Alphabetical Z-A</option>
+            </select>
+        </form>
+    </div>
+
+    <!--Search-->
+    <div class="w-50">
+        <form asp-page-handler="Search">
+            <input class="w-100" type="text" asp-for="_searchTerm" placeholder="Search for rocket... " />
+        </form>
+    </div>
+
+    <!--Login-->
+    <div class="float-right">
+        <!--Form to login-->
+        <form asp-page-handler="Login">
+            <label class="h5">
+                Login
+            </label>
+            <select asp-for="_loginId" onchange="this.form.submit()">
+                <option value="0">Login</option>
+                <!--Foreach customer in JSON file: create a row for them in the dropdown list-->
+                @foreach (Customer customer in Model._customerDataAccess.GetAll())
+                {
+                    <option value="@customer._id">
+                        @customer._name
+                    </option>
+                }
+            </select>
+        </form>
+    </div>
+</div>
+
+<!--Products-->
+<div class="container d-flex justify-content-around flex-wrap">
+    @foreach (Product product in Model._products)
+    {
+    <div class="card w-25 m-3">
+        <h2 class="card-title text-center">@product._title</h2>
+        <div class="card-body">
+            <!--Get the image of the product-->
+            <img src="@product._image "@*<-- This gets replaced with the link in the JSON file*@ class="card-img" alt="Image of @product._title @*<-- Replaces image if image link is not found*@"/>
+            <!--Create the description with only 150 letters to not fill the entire screen with description-->
+            <p class="card-text h5">@product._description.Substring(0, 50)...</p>
+        </div>
+
+        <div class="card-footer">
+            <form asp-page-handler="AddToCart" class="float-left">
+                <!--Hidden input with the products id to sneak some hidden data to the codebehind-->
+                <input type="hidden" asp-for="_productId" value="@product._id" />
+                <button class="btn btn-outline-primary" type="submit">
+                    Add to cart
+                </button>
+            </form>
+           
+            <h3 class=" card-text float-right">@product._price kr</h3>
+        </div>
+        
+
+
+
+    </div>
+
+
+
+    }
+</div>
+
+
+<!--Serialize button to press after changes to products or customers or to clear all orders and cart items-->
+<form asp-page-handler="Serialize" autocomplete="off">
+    <button type="submit">Serialize Mock</button>
+</form>

@@ -1,0 +1,65 @@
+[
+  {
+    "_id": 1,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/999-Mega-Bag-swe-kampanj.png",
+    "_title": "Mega Bang",
+    "_description": "Fyrverkeribag med ett flertal större artiklar och sammanlagd krutvikt på över 1,3 kg! Denna familjeförpackning levereras dessutom i denna praktiska bag. Obs! Innehållet i förpackningen kan variera något från bilden.",
+    "_price": 149
+  },
+  {
+    "_id": 2,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/360P-Golden-Explosion.png",
+    "_title": "Gold",
+    "_description": "Unna dig något exklusivt. Tårta med 100 guldeffekter. Kaskader med kronor, peony, krysantemum, guldregn och kamuroeffekter. En riktig publikfavorit!",
+    "_price": 399
+  },
+  {
+    "_id": 3,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/359P-Oden.png",
+    "_title": "Oden",
+    "_description": "Ett kilo krut! Exklusiv tårta med kaskader av kronor, peony, krysantemum, guldregn och kamuroeffekter, allt i en härlig mix av färger. En glad överraskning med extra knallar på slutfinalen!",
+    "_price": 599
+  },
+  {
+    "_id": 4,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/287-Atlas.png",
+    "_title": "Atlas",
+    "_description": "En överdådig show, fullt med färger och fantastiska effekter i pastell. Kraftfulla palmer, kronor och blinkande stjärnor med en final utöver det vanliga.",
+    "_price": 799
+  },
+  {
+    "_id": 5,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/275-Loke-1.png",
+    "_title": "Loke",
+    "_description": "121 skott i en riktig Hi-Tech tårta. Denna tårta är mixad och innehåller flera överraskningar.",
+    "_price": 2100
+  },
+  {
+    "_id": 6,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/280-Valhall.png",
+    "_title": "Valhall",
+    "_description": "Ett batteri med 76 skott i 3 olika innerdiametrar, en spännande tårta med med många olika effekter. Innehåller mycket effekt i guldnyans.",
+    "_price": 459
+  },
+  {
+    "_id": 7,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/280-2-Spartacus-kampanj.png",
+    "_title": "Spartacus",
+    "_description": "76 skott 20, 25 och 30 mm i innerdiameter. En riktigt bra tårta som innehåller mycket färger och effekter",
+    "_price": 995
+  },
+  {
+    "_id": 8,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/12/314-Afrodite.png",
+    "_title": "Afrodite",
+    "_description": "Innehållsrik och kraftig eldbägare. Stor variation och ännu större effekter, vilket gör pjäsen till en riktig upplevelse.",
+    "_price": 390
+  },
+  {
+    "_id": 9,
+    "_image": "https://www.sveafireworks.se/wp-content/uploads/2021/10/248-Neptunus-840-min.png",
+    "_title": "Neptunus",
+    "_description": "Stort innehåll i en liten förpackning, Hi-Tech tårta, som innehåller mycket glitter och som håller sig på varierande höjder. Tårtan har flera delfinaler.",
+    "_price": 1999
+  }
+]

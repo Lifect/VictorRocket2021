@@ -1,0 +1,56 @@
+﻿@page
+@model ShopUI.Pages.CartModel
+@using ShopUI.Models
+@{
+    double price = 0;
+}
+
+<div class="d-flex">
+
+
+    <!--Produkter-->
+    <div>
+        <table>
+            <thead>
+                <tr>
+                    <th>Image</th>
+                    <th>Name</th>
+                    <th>Description</th>
+                    <th>Price</th>
+                </tr>
+            </thead>
+
+            <tbody>
+
+                <!--Foreach product in the customers cart: create a row with its info-->
+                @foreach (Product product in Model._customer._shoppingCart._products)
+                {
+                price += product._price;
+                    <tr>
+                        <td class="w-25">
+                            <img src="@product._image" class="img-fluid pr-5" />
+                        </td>
+                        <td class="h4">@product._title</td>
+                        <td>@product._description.Substring(0, 50)...</td>
+                        <!--mrkr = Miljarder kronor-->
+                        <td class="h4">@product._price kr</td>
+                    </tr>
+                }
+
+            </tbody>
+
+        </table>
+        <div>
+            <h4 class="text-right text-weight-bold">Total price: @price kr</h4>
+        </div>
+        <form asp-page-handler="Order">
+            <button class="w-100 btn btn-outline-primary" type="submit">Order</button>
+        </form>
+    </div>
+
+    <!--Kundinformation-->
+    <div>
+        <h3 class="text-left text-nowrap p-2">Kund: @Model._customer._name</h3>
+    </div>
+
+</div>
